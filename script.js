@@ -106,8 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('bruhBtn').addEventListener('click', playBruh);
 
 
-  // --- PARTY NUKE MODE & HACK TERMINAL ---
+  // --- PARTY NUKE MODE & HACK POPUP MODAL ---
   const partyNukeBtn = document.getElementById('partyNukeBtn');
+  const hackModal = document.getElementById('hackModal');
+  const closeHackModalBtn = document.getElementById('closeHackModalBtn');
+  const closeHackModalX = document.getElementById('closeHackModalX');
+
+  function playChaChing() {
+    if (!soundEnabled) return;
+    initAudio();
+    const freqs = [987.77, 1318.51, 1567.98];
+    freqs.forEach((f, i) => {
+      setTimeout(() => playTone(f, 'sawtooth', 0.2, 0.4), i * 80);
+    });
+  }
+
   partyNukeBtn.addEventListener('click', () => {
     playAirhorn();
     playVictorySFX();
@@ -142,12 +155,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Floating Emoji Rain
     createFloatingEmojis();
 
-    // Launch Fake Hack Terminal Window after dramatic pause
+    // Launch Fake Hack Terminal Popup Modal after dramatic pause
     setTimeout(() => {
       document.body.classList.remove('shake', 'disco-mode');
-      window.open('hacked.html', '_blank');
-    }, 1200);
+      if (hackModal) {
+        hackModal.classList.remove('hidden');
+        playChaChing();
+      }
+    }, 1000);
   });
+
+  // Modal Close Buttons
+  function closeHackModal() {
+    if (hackModal) {
+      hackModal.classList.add('hidden');
+      playVictorySFX();
+    }
+  }
+
+  if (closeHackModalBtn) closeHackModalBtn.addEventListener('click', closeHackModal);
+  if (closeHackModalX) closeHackModalX.addEventListener('click', closeHackModal);
 
   function createFloatingEmojis() {
     const emojis = ['🎂', '🏎️', '👑', '🥳', '🍻', '🍕', '🚗', '💯'];

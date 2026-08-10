@@ -615,6 +615,138 @@ body.disco-mode {
   color: #888;
 }
 
+/* Hacker Popup Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.terminal-modal {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0d0d0d;
+  border: 3px solid #00ff66;
+  box-shadow: 0 0 35px rgba(0, 255, 102, 0.5);
+  border-radius: 6px;
+  color: #00ff66;
+  font-family: 'Share Tech Mono', 'VT323', monospace;
+}
+
+.terminal-bar {
+  background: #00ff66;
+  color: #000;
+  padding: 8px 15px;
+  font-family: var(--pixel-font);
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.close-modal-x {
+  background: #ff0055;
+  color: #fff;
+  border: 1px solid #000;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.alert-header {
+  color: #ff0055;
+  font-family: var(--pixel-font);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 15px 0;
+  text-shadow: 0 0 10px #ff0055;
+  animation: pulse 1s infinite alternate;
+}
+
+.hacked-box {
+  border: 2px dashed #ff0055;
+  background: rgba(255, 0, 85, 0.1);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.receipt-box {
+  background: #111;
+  border: 1px solid #00ff66;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #ffea00;
+  text-align: left;
+}
+
+.cash-amount {
+  color: #00ff66;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.webcam-box {
+  text-align: center;
+  margin: 15px 0;
+  border: 2px solid #ffea00;
+  padding: 12px;
+  background: #000;
+}
+
+.webcam-img {
+  width: 100%;
+  max-width: 280px;
+  border: 2px solid #ff0055;
+  border-radius: 4px;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-btn {
+  background: #00ff66;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  font-family: var(--pixel-font);
+  font-size: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ff66;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #ff0055;
+  color: #fff;
+  box-shadow: 0 0 20px #ff0055;
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   .main-title {
