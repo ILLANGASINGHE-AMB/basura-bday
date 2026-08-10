@@ -107,8 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const airhornBtn = document.getElementById('airhornBtn');
   if (airhornBtn) airhornBtn.addEventListener('click', playAirhorn);
 
+  const airhornHeaderBtn = document.getElementById('airhornHeaderBtn');
+  if (airhornHeaderBtn) airhornHeaderBtn.addEventListener('click', playAirhorn);
+
   const bruhBtn = document.getElementById('bruhBtn');
   if (bruhBtn) bruhBtn.addEventListener('click', playBruh);
+
+  const bruhHeaderBtn = document.getElementById('bruhHeaderBtn');
+  if (bruhHeaderBtn) bruhHeaderBtn.addEventListener('click', playBruh);
+
+  // Add retro pop sound to all buttons
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      playTone(587.33, 'triangle', 0.08, 0.2); // D5 pop
+    });
+  });
 
 
   // --- PARTY NUKE MODE & HACK POPUP MODAL ---

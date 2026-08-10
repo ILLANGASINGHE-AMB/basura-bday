@@ -747,6 +747,78 @@ body.disco-mode {
   box-shadow: 0 0 20px #ff0055;
 }
 
+/* EXTRA CHAOTIC MEME STYLING */
+.blink-rainbow {
+  animation: rainbowBlink 0.4s infinite alternate;
+}
+
+@keyframes rainbowBlink {
+  0% { color: #ff0055; text-shadow: 0 0 10px #ff0055; }
+  33% { color: #ffff00; text-shadow: 0 0 10px #ffff00; }
+  66% { color: #00ff66; text-shadow: 0 0 10px #00ff66; }
+  100% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+}
+
+.tilt-left { transform: rotate(-4deg); }
+.tilt-right { transform: rotate(4deg); }
+.tilt-extreme { transform: rotate(-7deg); }
+
+.sticker-tag {
+  display: inline-block;
+  background: var(--neon-yellow);
+  color: #000;
+  border: 2px solid #000;
+  font-family: var(--pixel-font);
+  font-size: 0.65rem;
+  padding: 4px 8px;
+  box-shadow: 3px 3px 0 #000;
+  margin: 4px;
+  transform: rotate(-3deg);
+}
+
+.sound-mini-btn {
+  background: #ffea00;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-family: var(--pixel-font);
+  font-size: 0.65rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.1s ease;
+}
+
+.sound-mini-btn:hover {
+  transform: scale(1.2) rotate(5deg);
+  background: #ff0055;
+  color: #fff;
+}
+
+.pulse-fast {
+  animation: pulseFast 0.6s infinite alternate;
+}
+
+@keyframes pulseFast {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05) rotate(1deg); }
+}
+
+/* Floating background meme stickers */
+.bg-drift-sticker {
+  position: fixed;
+  opacity: 0.15;
+  font-size: 3rem;
+  pointer-events: none;
+  z-index: 0;
+  animation: drift 12s infinite alternate ease-in-out;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(50px, 80px) rotate(45deg); }
+}
+
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   .main-title {
@@ -760,10 +832,5 @@ body.disco-mode {
 
   .roast-box {
     font-size: 1.1rem;
-  }
-
-  .sound-bar {
-    bottom: 10px;
-    right: 10px;
   }
 }
