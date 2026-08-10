@@ -91,19 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sound Toggle Button
+  // Sound Toggle Button (Optional)
   const soundToggleBtn = document.getElementById('soundToggleBtn');
   const soundStatus = document.getElementById('soundStatus');
 
-  soundToggleBtn.addEventListener('click', () => {
-    soundEnabled = !soundEnabled;
-    soundStatus.textContent = soundEnabled ? 'ON' : 'OFF';
-    soundToggleBtn.style.background = soundEnabled ? '#333' : '#ff0055';
-    if (soundEnabled) playTone(440, 'sine', 0.1);
-  });
+  if (soundToggleBtn && soundStatus) {
+    soundToggleBtn.addEventListener('click', () => {
+      soundEnabled = !soundEnabled;
+      soundStatus.textContent = soundEnabled ? 'ON' : 'OFF';
+      soundToggleBtn.style.background = soundEnabled ? '#333' : '#ff0055';
+      if (soundEnabled) playTone(440, 'sine', 0.1);
+    });
+  }
 
-  document.getElementById('airhornBtn').addEventListener('click', playAirhorn);
-  document.getElementById('bruhBtn').addEventListener('click', playBruh);
+  const airhornBtn = document.getElementById('airhornBtn');
+  if (airhornBtn) airhornBtn.addEventListener('click', playAirhorn);
+
+  const bruhBtn = document.getElementById('bruhBtn');
+  if (bruhBtn) bruhBtn.addEventListener('click', playBruh);
 
 
   // --- PARTY NUKE MODE & HACK POPUP MODAL ---
