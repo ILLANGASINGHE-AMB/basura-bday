@@ -1,5 +1,5 @@
 /* =======================================================
-   BASURA BDAY - INTERACTIVE JAVASCRIPT LOGIC
+   BHASURA BDAY - INTERACTIVE JAVASCRIPT LOGIC
    ======================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -173,15 +173,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- BRO-O-MATIC ROAST & FACT GENERATOR ---
   const roasts = [
-    "🔥 Fact #1: Basura doesn't take bad photos, bad photos take Basura.",
-    "🚗 Fact #2: Toyota named the Prado after Basura saw it and nodded in approval.",
-    "😴 Fact #3: Basura is scientifically proven to sleep 12 hours and still wake up asking for a nap.",
-    "👑 Fact #4: Bro code Section 1: Basura is exempt from washing dishes on his birthday.",
-    "🌊 Fact #5: When Basura walks into the ocean, the waves ask for an autograph.",
-    "🇱🇰 Fact #6: In a sarong, Basura has a 1000% higher chance of being mistaken for a diplomat.",
-    "🍕 Fact #7: The maximum amount of pizza Basura can eat is n+1.",
-    "🚀 Fact #8: NASA checked Basura's bro level and found it exceeded outer space limits.",
-    "⚡ Fact #9: 9 out of 10 scientists agree Basura is the most reliable bro in the hemisphere.",
+    "🔥 Fact #1: Bhasura doesn't take bad photos, bad photos take Bhasura.",
+    "🚗 Fact #2: Toyota named the Prado after Bhasura saw it and nodded in approval.",
+    "😴 Fact #3: Bhasura is scientifically proven to sleep 12 hours and still wake up asking for a nap.",
+    "👑 Fact #4: Bro code Section 1: Bhasura is exempt from washing dishes on his birthday.",
+    "🌊 Fact #5: When Bhasura walks into the ocean, the waves ask for an autograph.",
+    "🇱🇰 Fact #6: In a sarong, Bhasura has a 1000% higher chance of being mistaken for a diplomat.",
+    "🍕 Fact #7: The maximum amount of pizza Bhasura can eat is n+1.",
+    "🚀 Fact #8: NASA checked Bhasura's bro level and found it exceeded outer space limits.",
+    "⚡ Fact #9: 9 out of 10 scientists agree Bhasura is the most reliable bro in the hemisphere.",
     "🏆 Fact #10: On his birthday, calories consumed do not count."
   ];
 
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- BRO QUIZ MINI-GAME ---
   const quizData = [
     {
-      q: "Q1: What is Basura's superpower in daily life?",
+      q: "Q1: What is Bhasura's superpower in daily life?",
       options: [
         "A) Sleeping through 15 alarms effortlessly 🛌",
         "B) Looking like a CEO next to any vehicle 🚗",
@@ -229,10 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "D) All of the above (CORRECT!) 🔥"
       ],
       correct: 3,
-      funnyMsg: "BINGO! You know Basura is an all-around champion!"
+      funnyMsg: "BINGO! You know Bhasura is an all-around champion!"
     },
     {
-      q: "Q2: What happens when you go to the beach at midnight with Basura?",
+      q: "Q2: What happens when you go to the beach at midnight with Bhasura?",
       options: [
         "A) You solve the mysteries of the universe 🌌",
         "B) Take legendary selfies that belong in a museum 📸",
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
       funnyMsg: "EXACTLY! Midnight beach walks with bro are legendary!"
     },
     {
-      q: "Q3: How much does Basura mean to you?",
+      q: "Q3: How much does Bhasura mean to you?",
       options: [
         "A) He's okay I guess 🤷‍♂️",
         "B) Top tier bro 🥇",
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderQuiz() {
     if (currentQ >= quizData.length) {
       quizQuestion.textContent = "🎉 QUIZ COMPLETED: 100% BRO CERTIFIED!";
-      quizOptions.innerHTML = `<div class="roast-box" style="color:#2e7d32;">🏆 RESULT: Basura passed with Flying Colors (Bro Score: 999,999/10)!</div>`;
+      quizOptions.innerHTML = `<div class="roast-box" style="color:#2e7d32;">🏆 RESULT: Bhasura passed with Flying Colors (Bro Score: 999,999/10)!</div>`;
       quizFeedback.textContent = "";
       playVictorySFX();
       return;
