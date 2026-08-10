@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('bruhBtn').addEventListener('click', playBruh);
 
 
-  // --- PARTY NUKE MODE ---
+  // --- PARTY NUKE MODE & HACK TERMINAL ---
   const partyNukeBtn = document.getElementById('partyNukeBtn');
   partyNukeBtn.addEventListener('click', () => {
     playAirhorn();
@@ -138,12 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Body Screen Shake & Disco Flash
     document.body.classList.add('shake', 'disco-mode');
-    setTimeout(() => {
-      document.body.classList.remove('shake', 'disco-mode');
-    }, 3500);
 
     // Create Floating Emoji Rain
     createFloatingEmojis();
+
+    // Launch Fake Hack Terminal Window after dramatic pause
+    setTimeout(() => {
+      document.body.classList.remove('shake', 'disco-mode');
+      window.open('hacked.html', '_blank');
+    }, 1200);
   });
 
   function createFloatingEmojis() {
