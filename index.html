@@ -17,6 +17,29 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- RETRO BRO LOADING SCREEN OVERLAY -->
+  <div id="loadingScreen" class="loading-overlay">
+    <div class="loader-box">
+      <div class="loader-header">
+        <span>BhasuraOS (R) v6.9 Bro Bootloader</span>
+      </div>
+      <div class="loader-body">
+        <p class="loader-text">> Initializing Bhasura's Birthday System...</p>
+        <p class="loader-log" id="loaderLog">> [OK] Loading Prado Land Cruiser drivers...</p>
+        
+        <div class="progress-bar-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        
+        <div id="progressPercent" class="progress-percent">0%</div>
+
+        <div id="enterSiteBtnContainer" class="enter-btn-wrap hidden">
+          <button id="enterSiteBtn" class="enter-btn pulse-fast">🚀 CLICK TO ENTER BHASURA'S PARTY! 🥳</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Sliding Marquee Header -->
   <div class="ticker-wrap">
     <div class="ticker">

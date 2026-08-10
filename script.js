@@ -4,6 +4,60 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- RETRO BRO LOADING SCREEN LOGIC ---
+  const loadingScreen = document.getElementById('loadingScreen');
+  const progressBar = document.getElementById('progressBar');
+  const progressPercent = document.getElementById('progressPercent');
+  const loaderLog = document.getElementById('loaderLog');
+  const enterSiteBtnContainer = document.getElementById('enterSiteBtnContainer');
+  const enterSiteBtn = document.getElementById('enterSiteBtn');
+
+  let currentProgress = 0;
+
+  const logMessages = [
+    "> [OK] Initializing Bhasura's Bro Kernel...",
+    "> [OK] Loading Toyota Prado Land Cruiser drivers...",
+    "> [OK] Calibrating 12 morning alarms (ALL IGNORED)...",
+    "> [OK] Synchronizing bed sleeping position...",
+    "> [OK] Injecting maximum birthday chaos...",
+    "> [SUCCESS] BHASURA BDAY SYSTEM READY! 👑"
+  ];
+
+  const progressInterval = setInterval(() => {
+    currentProgress += Math.floor(Math.random() * 8) + 4;
+    if (currentProgress > 100) currentProgress = 100;
+
+    if (progressBar) progressBar.style.width = currentProgress + '%';
+    if (progressPercent) progressPercent.textContent = currentProgress + '%';
+
+    if (loaderLog) {
+      if (currentProgress < 20) loaderLog.textContent = logMessages[0];
+      else if (currentProgress < 40) loaderLog.textContent = logMessages[1];
+      else if (currentProgress < 60) loaderLog.textContent = logMessages[2];
+      else if (currentProgress < 80) loaderLog.textContent = logMessages[3];
+      else if (currentProgress < 100) loaderLog.textContent = logMessages[4];
+      else loaderLog.textContent = logMessages[5];
+    }
+
+    if (currentProgress >= 100) {
+      clearInterval(progressInterval);
+      if (enterSiteBtnContainer) enterSiteBtnContainer.classList.remove('hidden');
+    }
+  }, 90);
+
+  function dismissLoadingScreen() {
+    if (loadingScreen) {
+      loadingScreen.classList.add('fade-out');
+      playAirhorn();
+      playVictorySFX();
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 80, spread: 70, origin: { y: 0.5 } });
+      }
+    }
+  }
+
+  if (enterSiteBtn) enterSiteBtn.addEventListener('click', dismissLoadingScreen);
+
   // --- AUDIO SYNTHESIZER (WEB AUDIO API - ZERO DEPENDENCIES!) ---
   let audioCtx = null;
   let soundEnabled = true;
